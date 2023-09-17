@@ -27,23 +27,6 @@ class UserViewSet(ViewSet):
         except ValueError:
             return Response({"message": "Invalid email or password!"}, status=status.HTTP_403_FORBIDDEN)
 
-    @action(detail=True, methods=['post'])
-    def delete(self, request):
-        email = request.get("email")
-        password = request.POST.get("password")
-
-        if not User.objects.filter(email=email).exists():
-            return Response({"message": "User not found"}, status=status.HTTP_401_UNAUTHORIZED)
-
-        try:
-            User.delete_user(email, password)
-            return Response(
-                {"message": "Deleted successfully."},
-                status=status.HTTP_200_OK
-            )
-        except ValueError:
-            return Response({"message": "Invalid email or password!"}, status=status.HTTP_401_UNAUTHORIZED)
-
     @action(detail=False, methods=['post'])
     def register(self, request):
         username = request.POST.get("username")

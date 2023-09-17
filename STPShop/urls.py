@@ -12,6 +12,7 @@ from products.urls import (
     category_urlpatterns
 )
 from orders.urls import order_urlpatterns, order_product_urlpatterns
+from cart.urls import cart_urlpatterns
 
 # from rest_framework import permissions
 
@@ -46,6 +47,9 @@ urlpatterns = [
     # orders
     path('api/order/', include(order_urlpatterns)),
     path('api/order-product/', include(order_product_urlpatterns)),
+
+    # cart
+    path('api/cart/', include(cart_urlpatterns)),
 
     # swagger
     path('api-auth/', include('rest_framework.urls')),
