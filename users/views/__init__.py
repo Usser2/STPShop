@@ -1,2 +1,3 @@
-from .view_set import UserViewSet
+from .extra_actions import UserViewSet
 from .update import UserUpdateView
+from .delete import UserDeleteView
