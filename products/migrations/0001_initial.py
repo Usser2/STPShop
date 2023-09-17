@@ -43,8 +43,8 @@ class Migration(migrations.Migration):
             name='Specification',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('spec_name', models.CharField(max_length=100, verbose_name='характеристика')),
-                ('spec_desc', models.CharField(max_length=100, verbose_name='описание характеристики')),
+                ('name', models.CharField(max_length=100, verbose_name='характеристика')),
+                ('description', models.CharField(max_length=100, verbose_name='описание характеристики')),
                 ('product', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='products.product', verbose_name='товар')),
             ],
             options={

@@ -14,4 +14,4 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Specification)
 class SpecificationAdmin(admin.ModelAdmin):
-    list_display = ["product", "spec_name"]
+    list_display = ["product", "name"]
