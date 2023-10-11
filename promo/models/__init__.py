@@ -1,2 +1,2 @@
 from .promocode import PromoCode
-from .used_promocode import UsedPromoCode
+from .user_promocode import UserPromoCode

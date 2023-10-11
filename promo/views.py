@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+from .tasks import promo_checker
+
+
+def promo_checker_view(request):
+    promo_checker(repeat=60)
